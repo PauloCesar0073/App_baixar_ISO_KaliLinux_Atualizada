@@ -1,3 +1,4 @@
+import os
 import subprocess
 import tkinter as tk
 from os import name
@@ -81,8 +82,12 @@ def janela():
     window.resizable(False, False)
     window.config(background="#1B1B1B")  # Fundo principal
 
+  # Obter o diretório atual do script
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+
     # Carregar a imagem do ícone
-    icon_image = Image.open("C:\\Users\\paulo\OneDrive\\Documentos\\GitHub\\App_baixar_ISO_KaliLinux_Atualizada\\.venv\\icon.png")
+    icon_path = os.path.join(script_dir, "icon.png")
+    icon_image = Image.open(icon_path)
 
     # Definir a imagem como ícone da janela
     window.iconphoto(True, ImageTk.PhotoImage(icon_image))
