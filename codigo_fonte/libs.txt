@@ -1,0 +1,5 @@
+auto-py-to-exe==2.36.0
+beautifulsoup4==4.12.2
+requests==2.31.0
+Pillow==10.0.0
+
